@@ -4,7 +4,7 @@
 @package:	atatonic CSS framework 2009	
 @Author: 	Tim Benniks <tim@timbenniks.com>
 @Created: 	01-02-2009
-@Changed:	21-05-2009
+@Changed:	09-03-2010
 
 ---------------------------------------------------------- */
 
@@ -74,12 +74,10 @@ hr {
 /* html 5 compatability
 ---------------------------------------------------------- */
 
-header, 
-footer, 
-section, 
-aside, 
-nav, 
-article {
+header, footer, section, 
+aside, nav, article,
+figure, hgroup, audio,
+canvas, datalist, video {
 	display: block !important;
 }
 
@@ -93,45 +91,45 @@ article {
 
 ---------------------------------------------------------- */
 
-.zp-wrapper {  
+.at-wrapper {  
 	margin: 0 auto; 
 	width: 970px;
 }
 
-.zp-5,  .zp-10, .zp-15,
-.zp-20, .zp-25, .zp-30,
-.zp-33, .zp-35, .zp-40,
-.zp-45, .zp-50, .zp-55,
-.zp-60, .zp-65, .zp-67,
-.zp-70, .zp-75, .zp-80,
-.zp-85, .zp-90, .zp-95,
-.zp-100 {
+.at-5,  .at-10, .at-15,
+.at-20, .at-25, .at-30,
+.at-33, .at-35, .at-40,
+.at-45, .at-50, .at-55,
+.at-60, .at-65, .at-67,
+.at-70, .at-75, .at-80,
+.at-85, .at-90, .at-95,
+.at-100 {
 	float:left; 
 	display: inline; 
 }
 	
-.zp-5  { width:5%; 		}
-.zp-10 { width:10%; 	}
-.zp-15 { width:15%; 	}
-.zp-20 { width:20%; 	}
-.zp-25 { width:25%; 	}
-.zp-30 { width:30%; 	}
-.zp-33 { width:33.33%; 	}
-.zp-35 { width:35%; 	}
-.zp-40 { width:40%; 	}
-.zp-45 { width:45%; 	}
-.zp-50 { width:50%; 	} 
-.zp-55 { width:55%; 	}
-.zp-60 { width:60%; 	}
-.zp-65 { width:65%; 	}
-.zp-67 { width:66.67%; 	}
-.zp-70 { width:70%; 	}
-.zp-75 { width:75%; 	}
-.zp-80 { width:80%; 	}
-.zp-85 { width:85%; 	}
-.zp-90 { width:90%; 	}
-.zp-95 { width:95%; 	}
-.zp-100 { width:100%; 	}
+.at-5  { width:5%; 		}
+.at-10 { width:10%; 	}
+.at-15 { width:15%; 	}
+.at-20 { width:20%; 	}
+.at-25 { width:25%; 	}
+.at-30 { width:30%; 	}
+.at-33 { width:33.33%; 	}
+.at-35 { width:35%; 	}
+.at-40 { width:40%; 	}
+.at-45 { width:45%; 	}
+.at-50 { width:50%; 	} 
+.at-55 { width:55%; 	}
+.at-60 { width:60%; 	}
+.at-65 { width:65%; 	}
+.at-67 { width:66.67%; 	}
+.at-70 { width:70%; 	}
+.at-75 { width:75%; 	}
+.at-80 { width:80%; 	}
+.at-85 { width:85%; 	}
+.at-90 { width:90%; 	}
+.at-95 { width:95%; 	}
+.at-100 { width:100%; 	}
 
 .last {
 	padding: 0 !important;
@@ -169,7 +167,7 @@ article {
 ---------------------------------------------------------- */
 
 .clearfix:after, 
-.zp-wrapper:after {
+.at-wrapper:after {
     content: ".";
     display: block;
     clear: both;
@@ -179,17 +177,17 @@ article {
 }
 
 .clearfix, 
-.zp-wrapper {
+.at-wrapper {
     display: inline-block;
 }
 
 html[xmlns] .clearfix,
-html[xmlns] .zp-wrapper {
+html[xmlns] .at-wrapper {
     display: block;
 }
 
 * html .clearfix,
-* html .zp-wrapper {
+* html .at-wrapper {
     height: 1%;
 }
 

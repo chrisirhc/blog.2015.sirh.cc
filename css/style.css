@@ -1,0 +1,13 @@
+body {
+  padding: 2em;
+}
+
+pre, code {
+  border: 0;
+  background: transparent;
+}
+
+#content {
+  max-width: 800px;
+  margin: auto;
+}
