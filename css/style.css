@@ -1,5 +1,8 @@
 body {
-  padding: 2em;
+  padding-top: 36px;
+  /*
+  background: #333;
+  */
 }
 
 pre, code {
@@ -7,7 +10,26 @@ pre, code {
   background: transparent;
 }
 
-#content {
-  max-width: 800px;
+#wrapper {
+  max-width: 600px;
   margin: auto;
+}
+
+#content {
+  background: #fff;
+  padding: 9px;
+}
+
+.post {
+  background: #fff;
+  border: 9px solid #eee;
+  margin-bottom: 18px;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  padding: 0 9px;
+}
+
+#wrapper > h1 {
+  color: #999;
 }
