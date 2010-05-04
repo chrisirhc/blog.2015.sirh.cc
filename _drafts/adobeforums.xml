@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table xmlns="http://query.yahooapis.com/v1/schema/table.xsd">
+  <meta>
+    <sampleQuery>select * from {table} where expression = "(.*)" and text = "The quick brown fox leaps over the lazy dog";</sampleQuery>
+    <author>Chris Chua (@chrisirhc)</author>
+    <description>This is a hacked out table. Should output all the posts of a particular forum in Adobe Forums.</description>
+  </meta>
+  <bindings>
+    <select itemPath="post" produces="XML">
+      <urls>
+        <url></url>
+      </urls>
+      <inputs>
+          <!--
+          <key id='postid' type='type' paramType='variable' required="true" />
+          <key id='' type='type' paramType='variable' required="true" />
+          <key id='modifiers' type='type' paramType='variable' required="false" />
+          <key id='replacement' type='xs:string' paramType='variable' required="false" />
+          <key id='showempty' type='type' paramType='variable' required="false" />
+          -->
+      </inputs>
+
+      <execute><![CDATA[
+
+      // TODO can probably have different forums as an option
+      /**
+       * Return a list of threadIds for a particular forum (Photoshop Windows)
+       */
+      function getThreads() {
+        var q;
+        // this is to grab all the threads in the forum from the server
+        q = y.query('
+            use "http://yqlblog.net/samples/data.html.cssselect.xml";
+            select * from data.html.cssselect where url="http://forums.adobe.com/view-threads.jspa?containerType=14&container=3340&start=90&tagSet=-1&numResults=30&filter=all" and css=".jive-table-cell-subject a";
+            ');
+        this.threadlist = [];
+        for each (var subjectlink in q.results) {
+          // perform simple regex to extract the threadId
+          this.threadlist.push(subjectlink.@['href'].toString()
+              .replace(/^\/thread\/([0-9]+?);.*$/, "$1"));
+        }
+      }
+
+      function getPosts(threadId) {
+        this.postlist = [];
+      }
+
+      /** Get data of the user given the id */
+      function getUsers(userId) {
+      }
+
+	 ]]></execute>
+    </select> 
+  </bindings>
+</table>
+
