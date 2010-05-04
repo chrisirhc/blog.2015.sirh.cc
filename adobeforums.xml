@@ -39,16 +39,42 @@
           this.threadlist.push(subjectlink.@['href'].toString()
               .replace(/^\/thread\/([0-9]+?);.*$/, "$1"));
         }
+        return this.threadlist;
       }
 
+      /**
+       * Return a list of posts in the threadId given
+       */
       function getPosts(threadId) {
+        var q;
         this.postlist = [];
+        q = y.query('
+            select * from html where url="http://forums.adobe.com/thread/628301?decorator=print&displayFullThread=true" and xpath="//div[@class=\'jive-thread-post-body\' or @class=\'jive-thread-reply-body\']";
+        ');
+
+        // Thread post has special treatment
+        for each(var postBody in q.results.div) {
+          // aoeu
+          // getPost
+        }
       }
+
+      function getPost(postBody) {
+        var post = {};
+      }
+
+      css=".jive-thread-post-body, .jive-thread-reply-body";
+      // ^(?s)(?:.*?)<div class='jive-rendered-content'>(.*?)</div>.*$
 
       /** Get data of the user given the id */
       function getUsers(userId) {
       }
 
+      var threads = getThreads();
+      default xml namespace = '';
+      for each (var thread in threads) {
+        response.object += <thread>{thread}</thread>;
+      }
 	 ]]></execute>
     </select> 
   </bindings>
