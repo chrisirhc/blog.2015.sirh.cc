@@ -29,10 +29,8 @@
       function getThreads() {
         var q;
         // this is to grab all the threads in the forum from the server
-        q = y.query('
-            use "http://yqlblog.net/samples/data.html.cssselect.xml";
-            select * from data.html.cssselect where url="http://forums.adobe.com/view-threads.jspa?containerType=14&container=3340&start=90&tagSet=-1&numResults=30&filter=all" and css=".jive-table-cell-subject a";
-            ');
+        q = y.query(' use "http://yqlblog.net/samples/data.html.cssselect.xml";
+            select * from data.html.cssselect where url="http://forums.adobe.com/view-threads.jspa?containerType=14&container=3340&start=90&tagSet=-1&numResults=30&filter=all" and css=".jive-table-cell-subject a"; ');
         this.threadlist = [];
         for each (var subjectlink in q.results) {
           // perform simple regex to extract the threadId
@@ -48,9 +46,7 @@
       function getPosts(threadId) {
         var q;
         this.postlist = [];
-        q = y.query('
-            select * from html where url="http://forums.adobe.com/thread/628301?decorator=print&displayFullThread=true" and xpath="//div[@class=\'jive-thread-post-body\' or @class=\'jive-thread-reply-body\']";
-        ');
+        q = y.query(' select * from html where url="http://forums.adobe.com/thread/628301?decorator=print&displayFullThread=true" and xpath="//div[@class=\'jive-thread-post-body\' or @class=\'jive-thread-reply-body\']";');
 
         // Thread post has special treatment
         for each(var postBody in q.results.div) {
