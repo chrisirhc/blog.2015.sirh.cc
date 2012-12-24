@@ -1,23 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>{{ page.title }}</title>
-<link href="/lib/css/at-base.css" type="text/css" media="screen, print" rel="stylesheet" />
-<link href="/lib/css/at-type.css" type="text/css" media="screen, print" rel="stylesheet" />
-<link href="/lib/css/at-print.css" type="text/css" media="print" rel="stylesheet" />
-<link href="/css/style.css" type="text/css" media="screen" rel="stylesheet" />
-
-<!--[if IE]>
-<link href="/lib/css/at-ie.css" type="text/css" media="screen" rel="stylesheet" />
-<![endif]-->
+  <head>
+  <title>{{ page.title }}</title>
+  <!-- Bootstrap -->
+  <link href="/lib/bootstrap/css/bootstrap.min.css" type="text/css" media="screen" rel="stylesheet" />
 </head>
 <body>
-<div id="wrapper">
-  <h1>chrisirhc</h1>
+<div class="container">
+  <a href="/"><h1>chrisirhc</h1></a>
+  <hr />
   <div class="padding" id="content">
-    <h1>{{ page.title}}</h1>
+    <h2>{{ page.title}}</h2>
     {{ content }}
   </div>
 </div>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
 </body>
 </html>
