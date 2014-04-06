@@ -1,6 +1,7 @@
 ---
 layout: post
 title: d3 data transitions in AngularJS
+excerpt: '<iframe class="example-frame" src="http://bl.ocks.org/chrisirhc/raw/10003441/" height="250" width="510"><!-- Workaround this tag getting munged --></iframe>'
 ---
 
 Just whipped up a demonstration of implementing data transitions via d3 through AngularJS directives.
