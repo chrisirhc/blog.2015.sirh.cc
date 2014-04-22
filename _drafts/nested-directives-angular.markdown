@@ -14,15 +14,18 @@ Wrap into two time pickers:
 
 What if let's say now, I want to add an option such as no picking a weekend for the start date?
 
-### Meh solution
+### Quick fix solution
 
 Add a new scope variable bound to an attribute
 
 Here's what it'll look like:
 
-### What's wrong with meh solution?
+Oh wait, what if the user doesn't specify the attribute?
+You need to initialize it correctly.
 
-What if you want to add another option now? What if there were many options on the time picker directive? Adding a scope variable etc. is a lot of trouble.
+What if you want to add another option now? Add another scope variable?
+
+What if there were many options on the time picker directive? Adding a scope variable etc. is a lot of trouble.
 
 - Also consider the case of this: default options. You need default options for the scope variable even if the thing isn't set?
 - Setting up default options can be a lot of code
