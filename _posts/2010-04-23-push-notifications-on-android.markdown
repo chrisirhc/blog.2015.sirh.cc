@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Push notifications on Android
+excerpt: ''
 ---
 
 Update\: This article is outdated and is kept here for archival purposes.

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Messing around with Yahoo! Pipes
+excerpt: ''
 ---
 
 Playing around with the Yahoo! Pipes and spent an hour working on the Regex module until I found that the source of the problem was a bug with their S flag. 

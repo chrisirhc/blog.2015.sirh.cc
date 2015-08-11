@@ -1,6 +1,7 @@
 ---
 layout: post
 title: First Post
+excerpt: ''
 ---
 
 I'm following a tutorial on Envy Labs on how to setup this blog.
